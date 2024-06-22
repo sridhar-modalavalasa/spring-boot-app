@@ -5,7 +5,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    port: 80
-    targetPort: 8080
+    - port: 80          # External port exposed by the Service
+      targetPort: 8080  # Internal port where the application is running
   selector:
     app: spring-boot-app

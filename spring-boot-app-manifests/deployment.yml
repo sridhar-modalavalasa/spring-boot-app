@@ -5,7 +5,7 @@ metadata:
   labels:
     app: spring-boot-app
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: spring-boot-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: shreedhar4037/spring-boot-cicd:3
+        image: shreedhar4037/spring-boot-cicd:replaceImageTag
         ports:
         - containerPort: 8080
